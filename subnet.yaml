@@ -1,0 +1,15 @@
+apiVersion: network.azure.crossplane.io/v1alpha3
+kind: Subnet
+metadata:
+  name: sub-crossplane
+spec:
+  resourceGroupNameRef:
+    name: rg-crossplane
+  virtualNetworkNameRef:
+    name: vn-crossplane
+  properties:
+    addressPrefix: 10.2.0.0/24
+    serviceEndpoints:
+      - service: Microsoft.Sql
+  providerConfigRef:
+    name: default

@@ -1,0 +1,6 @@
+apiVersion: azure.crossplane.io/v1alpha3
+kind: ResourceGroup
+metadata:
+ name: rg-crossplane
+spec:
+ location: eastus
