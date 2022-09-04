@@ -3,6 +3,8 @@ kind: Account
 metadata:
   ##make sure the length is less 24 char
   name: foxutechstoragexplane
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
 spec:
   resourceGroupName: rg-crossplane
   storageAccountSpec:

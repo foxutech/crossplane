@@ -2,6 +2,8 @@ apiVersion: pkg.crossplane.io/v1
 kind: Provider
 metadata:
  name: provider-azure
+ annotations:
+   argocd.argoproj.io/sync-wave: "-1"
 spec:
  package: "crossplane/provider-azure:master"
 ---

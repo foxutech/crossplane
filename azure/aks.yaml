@@ -3,6 +3,8 @@ apiVersion: compute.azure.crossplane.io/v1alpha3
 kind: AKSCluster
 metadata:
   name: xrdakscluster
+ annotations:
+   argocd.argoproj.io/sync-wave: "5"
 spec:
   resourceGroupNameRef:
     name: rg-crossplane
