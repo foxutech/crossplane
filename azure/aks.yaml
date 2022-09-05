@@ -10,7 +10,7 @@ spec:
     name: rg-crossplane
   vnetSubnetIDRef:
     name: sub-crossplane
-  location: us-east
+  location: eastus
   version: "1.23.8"
   nodeCount: 1
   nodeVMSize: Standard_B2s
