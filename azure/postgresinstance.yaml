@@ -18,7 +18,7 @@ spec:
       capacity: 2
       family: Gen5
     storageProfile:
-      storageMB: 20480
+      storageMB: 40960
   writeConnectionSecretToRef:
     namespace: crossplane
     name: fox-psqldb
