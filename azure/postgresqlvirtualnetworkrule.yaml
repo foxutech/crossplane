@@ -2,6 +2,8 @@ apiVersion: database.azure.crossplane.io/v1alpha3
 kind: PostgreSQLServerVirtualNetworkRule
 metadata:
   name: foxd-psql-vnrule
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
 spec:
   providerConfigRef:
     name: default

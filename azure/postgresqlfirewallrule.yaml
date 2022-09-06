@@ -2,6 +2,8 @@ apiVersion: database.azure.crossplane.io/v1alpha3
 kind: PostgreSQLServerFirewallRule
 metadata:
   name: fox-psql-fwrule
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
 spec:
   providerConfigRef:
     name: default
