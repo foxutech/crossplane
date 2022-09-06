@@ -1,0 +1,14 @@
+apiVersion: database.azure.crossplane.io/v1alpha3
+kind: PostgreSQLServerVirtualNetworkRule
+metadata:
+  name: foxd-psql-vnrule
+spec:
+  providerConfigRef:
+    name: default
+  resourceGroupNameRef:
+    name: rg-crossplane
+  serverNameRef:
+    name: fox-psqldb
+  properties:
+    virtualNetworkSubnetIdRef:
+      name: vn-crossplane

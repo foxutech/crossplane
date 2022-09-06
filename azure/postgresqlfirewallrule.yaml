@@ -1,0 +1,15 @@
+apiVersion: database.azure.crossplane.io/v1alpha3
+kind: PostgreSQLServerFirewallRule
+metadata:
+  name: fox-psql-fwrule
+spec:
+  providerConfigRef:
+    name: default
+  forProvider:
+    resourceGroupNameRef:
+      name: rg-crossplane
+    serverNameRef:
+      name: fox-psqldb
+    properties:
+      startIpAddress: "0.0.0.0"
+      endIpAddress: "0.0.0.0"
