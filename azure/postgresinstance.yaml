@@ -12,7 +12,7 @@ spec:
       name: rg-crossplane
     location: eastus
     minimalTlsVersion: TLS1_2
-    sslEnforcement: Enabled
+    sslEnforcement: Disabled
     version: "11"
     sku:
       tier: GeneralPurpose
