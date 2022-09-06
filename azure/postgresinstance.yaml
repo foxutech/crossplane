@@ -1,5 +1,5 @@
 apiVersion: database.azure.crossplane.io/v1alpha3
-kind: PostgreSQLInstance
+kind: PostgreSQLServer
 metadata:
   name: my-db
   annotations:
