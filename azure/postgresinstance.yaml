@@ -2,8 +2,8 @@ apiVersion: database.example.org/v1alpha1
 kind: PostgreSQLInstance
 metadata:
   name: my-db
- annotations:
-   argocd.argoproj.io/sync-wave: "4"
+  annotations:
+    argocd.argoproj.io/sync-wave: "4"
 spec:
   parameters:
     storageGB: 20
