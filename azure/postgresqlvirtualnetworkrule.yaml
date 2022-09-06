@@ -11,4 +11,4 @@ spec:
     name: fox-psqldb
   properties:
     virtualNetworkSubnetIdRef:
-      name: vn-crossplane
+      name: sub-crossplane
