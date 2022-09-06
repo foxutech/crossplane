@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: azure-crossplane
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: crossplane
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: azure
+    repoURL: https://github.com/foxutech/crossplane.git
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
