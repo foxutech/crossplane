@@ -1,0 +1,11 @@
+apiVersion: storage.azure.crossplane.io/v1alpha3
+kind: Container
+metadata:
+  name: foxd-container
+spec:
+  writeConnectionSecretToRef:
+    name: foxd-container
+    namespace: crossplane
+  providerConfigRef:
+    namespace: default
+    name: storageaccount-connection-secret
