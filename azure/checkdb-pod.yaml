@@ -16,20 +16,20 @@ spec:
     - name: PGHOST
       valueFrom:
         secretKeyRef:
-          name: db-conn
+          name: fox-psqldb
           key: endpoint
     - name: PGUSER
       valueFrom:
         secretKeyRef:
-          name: db-conn
+          name: fox-psqldb
           key: username
     - name: PGPASSWORD
       valueFrom:
         secretKeyRef:
-          name: db-conn
+          name: fox-psqldb
           key: password
     - name: PGPORT
       valueFrom:
         secretKeyRef:
-          name: db-conn
+          name: fox-psqldb
           key: port
