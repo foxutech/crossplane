@@ -3,7 +3,6 @@ kind: Provider
 metadata:
  name: provider-azure
  annotations:
-   argocd.argoproj.io/hook: PreSync
    argocd.argoproj.io/sync-wave: "-1"
 spec:
  package: "crossplane/provider-azure:master"
