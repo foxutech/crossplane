@@ -1,14 +1,27 @@
-apiVersion: database.azure.crossplane.io/v1alpha3
+---
+apiVersion: database.azure.crossplane.io/v1beta1
 kind: PostgreSQLServer
 metadata:
-  name: my-db
+  name: fox-psqldb
   annotations:
     argocd.argoproj.io/sync-wave: "4"
 spec:
-  parameters:
-    storageGB: 20
-  compositionSelector:
-    matchLabels:
-      provider: azure
+  forProvider:
+    administratorLogin: foxadmin
+    resourceGroupNameRef:
+      name: rg-crossplane
+    location: eastus
+    minimalTlsVersion: TLS1_2
+    sslEnforcement: Enabled
+    version: "11"
+    sku:
+      tier: GeneralPurpose
+      capacity: 2
+      family: Gen5
+    storageProfile:
+      storageMB: 20480
   writeConnectionSecretToRef:
-    name: db-conn
+    namespace: crossplane
+    name: fox-psqldb
+  providerConfigRef:
+    name: default
