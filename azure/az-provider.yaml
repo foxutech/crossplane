@@ -17,6 +17,6 @@ spec:
  credentials:
    source: Secret
    secretRef:
-     namespace: argocd
+     namespace: crossplane
      name: azure-creds
      key: creds
