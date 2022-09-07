@@ -7,5 +7,4 @@ spec:
     name: foxd-container
     namespace: crossplane
   providerConfigRef:
-    namespace: default
-    name: storageaccount-connection-secret
+    name: default
