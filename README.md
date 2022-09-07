@@ -1,4 +1,4 @@
-# crossplane
+# Crossplane
 This repo will be used for crossplane example
 
 Follow this page to create the azure service principle and azure provider secret configuration. 
